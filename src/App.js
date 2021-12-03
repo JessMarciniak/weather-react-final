@@ -1,14 +1,13 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import Weather from "./Weather";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <h1> Weather App Final</h1>
-        <div className="location">
-          <button className="btn btn-primary">Testing</button>
-        </div>
+        <Weather />
         <footer>
           {" "}
           This project was coded by Jessica Marciniak and is{" "}
