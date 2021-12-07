@@ -1,8 +1,9 @@
 .Weather {
+  font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #dadde1;
   padding: 16px;
   border-radius: 4px;
-  color: rg(135, 135, 135);
+  color: rgb(135, 135, 135);
 }
 .Weather form {
   margin-bottom: 20px;
@@ -26,12 +27,12 @@
   line-height: 19px;
   list-style: none;
 }
-.Weather img {
-  height: 64px;
-  width: 64px;
-  margin-right: 8px;
+
+.Weather canvas {
+  margin: 10px auto;
   display: inline-block;
 }
+
 .Weather .temperature {
   font-weight: bold;
   color: rgb(33, 33, 33);
