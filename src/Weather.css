@@ -9,6 +9,10 @@
   margin-bottom: 20px;
 }
 
+.Weather canvas {
+  margin-top: 15px;
+}
+
 .Weather h1 {
   font-size: 24px;
   font-weight: 100;
@@ -26,11 +30,6 @@
   font-weight: 100;
   line-height: 19px;
   list-style: none;
-}
-
-.Weather canvas {
-  margin: 10px auto;
-  display: inline-block;
 }
 
 .Weather .temperature {
