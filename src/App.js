@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
 import Weather from "./Weather";
 
 export default function App() {
@@ -13,7 +12,12 @@ export default function App() {
           This project was coded by Jessica Marciniak and is{" "}
           <a href="https://github.com/JessMarciniak/weather-react-final">
             open-sourced on GitHub.
+          </a>{" "}
+          and hosted on{" "}
+          <a href="https://app.netlify.com/sites/inspiring-northcutt-91ff28/overview">
+            Netlify
           </a>
+          .
         </footer>
       </div>
     </div>
