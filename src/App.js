@@ -10,11 +10,19 @@ export default function App() {
         <footer>
           {" "}
           This project was coded by Jessica Marciniak and is{" "}
-          <a href="https://github.com/JessMarciniak/weather-react-final">
+          <a
+            href="https://github.com/JessMarciniak/weather-react-final"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             open-sourced on GitHub.
           </a>{" "}
           and hosted on{" "}
-          <a href="https://app.netlify.com/sites/inspiring-northcutt-91ff28/overview">
+          <a
+            href="https://app.netlify.com/sites/inspiring-northcutt-91ff28/overview"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Netlify
           </a>
           .
