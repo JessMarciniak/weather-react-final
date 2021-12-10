@@ -15,8 +15,9 @@ export default function WeatherForecast(props) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
+
   function load() {
-    const apiKey = `fb57d65c8433d702c30132cfdf5708ba`;
+    const apiKey = "fb57d65c8433d702c30132cfdf5708ba";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
@@ -27,7 +28,7 @@ export default function WeatherForecast(props) {
   if (loaded) {
     return (
       <div className="WeatherForecast">
-        <div className="row">
+        <div className="row forecast-section pt-3 d-flex justify-content-evenly">
           {forecast.map(function (dailyForecast, index) {
             if (index < 6) {
               return (

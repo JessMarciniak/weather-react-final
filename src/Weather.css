@@ -63,3 +63,27 @@
 .float-left {
   float: left;
 }
+
+.Weather .locationButton {
+  border-radius: 5px;
+}
+
+.weatherConditions {
+  border-top: 0.5px solid rgba(238, 238, 238, 0.3);
+  border-bottom: 0.5px solid rgba(238, 238, 238, 0.3);
+  padding: 10px;
+}
+
+.weatherCondition {
+  text-align: center;
+}
+
+.currentHumidity,
+.currentWind,
+.currentMax,
+.currentMin,
+.currentFeelsLike {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0;
+}

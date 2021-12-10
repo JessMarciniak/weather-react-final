@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
-import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -26,7 +27,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = `fb57d65c8433d702c30132cfdf5708ba`;
+    const apiKey = "fb57d65c8433d702c30132cfdf5708ba";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -37,7 +38,7 @@ export default function Weather(props) {
   }
 
   function searchLocation(position) {
-    let apiKey = `fb57d65c8433d702c30132cfdf5708ba`;
+    let apiKey = "fb57d65c8433d702c30132cfdf5708ba";
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
@@ -57,8 +58,16 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-6">
+          <div className="row form-section pt-3">
+            <div className="col-3 col-md-2">
+              <button
+                onClick={getLocation}
+                className="locationButton btn btn-primary"
+              >
+                Current
+              </button>
+            </div>
+            <div className="col-6 col-md-8">
               <input
                 type="search"
                 placeholder="Enter a city..."
@@ -67,21 +76,17 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-3 col-md-2">
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-info w-100"
+                className="btn btn-info w-100 text-center"
               />
-            </div>
-            <div className="col-3">
-              <button onClick={getLocation} className="locationButton ms-1">
-                📍
-              </button>
             </div>
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <hr />
         <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
