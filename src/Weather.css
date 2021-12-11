@@ -1,9 +1,15 @@
+:root {
+  --main-text-color: #0d6efd;
+  --secondary-color: #31d2f2;
+}
+
 .Weather {
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #dadde1;
   padding: 16px;
   border-radius: 4px;
-  color: rgb(135, 135, 135);
+  color: var(--main-text-color);
+  background-color: #21356e;
 }
 .Weather form {
   margin-bottom: 20px;
@@ -20,21 +26,51 @@
   margin: 20px 0 0 0;
 }
 
-.Weather ul {
-  margin: 0;
-  padding: 0;
+.Weather .locationButton:hover {
+  background-color: #21356e;
+  border-color: #0d6efd;
+  color: #0d6efd;
+  transition: 0.4s ease-out;
 }
 
-.Weather li {
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
-  list-style: none;
+.Weather .searchButton:hover {
+  background-color: #21356e;
+  border-color: #31d2f2;
+  color: #31d2f2;
+  transition: 0.4s ease-out;
+}
+.Weather .form-control {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--secondary-color);
+  border-radius: 0;
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 5px;
+}
+
+.Weather .form-control:focus {
+  color: #fff;
+  background-color: transparent;
+  border-color: var(--secondary-color);
+  outline: 0;
+  box-shadow: none;
+  transition: 0.2s ease-out;
+}
+
+.Weather .form-control:hover {
+  color: var(--secondary-color);
+  background-color: #31d2f283;
+  border-color: var(--secondary-color);
+  outline: 0;
+  box-shadow: none;
+  transition: 0.2s ease-out;
 }
 
 .Weather .temperature {
   font-weight: bold;
-  color: rgb(33, 33, 33);
+  color: var(--main-text-color);
   font-size: 50px;
   font-weight: 400;
   line-height: 64px;
@@ -42,7 +78,7 @@
 }
 
 .Weather .unit {
-  color: rgb(33, 33, 33);
+  color: var(--main-text-color);
   font-size: 16px;
   font-weight: 400;
   position: relative;
@@ -53,6 +89,7 @@
 
 .Weather .unit a {
   text-decoration: none;
+  color: #9fadd3;
 }
 
 .Weather .unit a:hover {
@@ -62,6 +99,10 @@
 
 .float-left {
   float: left;
+}
+
+.float-right {
+  float: right;
 }
 
 .Weather .locationButton {
@@ -80,10 +121,12 @@
 
 .currentHumidity,
 .currentWind,
-.currentMax,
-.currentMin,
 .currentFeelsLike {
   font-size: 12px;
-  text-transform: uppercase;
   margin: 0;
+}
+
+.currentMax,
+.currentMin {
+  margin: 10px;
 }

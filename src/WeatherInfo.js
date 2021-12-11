@@ -27,7 +27,7 @@ export default function WeatherInfo(props) {
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
       <div className="row mt-3">
-        <div className="col-6">
+        <div className="col-9">
           <div className="clearfix">
             <div className="float-left">
               <WeatherIcon
@@ -41,21 +41,24 @@ export default function WeatherInfo(props) {
             </div>
           </div>
         </div>
-        <hr />
+
+        <div className="col-3 float-right">
+          <div className="col currentMax">High: {maxTemperature()}°</div>{" "}
+          <div className="col currentMin">Low: {minTemperature()}°</div>{" "}
+        </div>
+
         <div className="container weatherCurrentStats">
-          <div className="row weatherCurrentSection justify-content-between">
+          <div className="row weatherCurrentSection">
             <div className="col weatherConditions">
               <div className="col weatherCondition">
                 <span className="col currentFeelsLike">
                   Feels Like: {feelsTemperature()}°
                 </span>{" "}
-                <span className="col currentMax">H: {maxTemperature()}°</span>{" "}
-                <span className="col currentMin">L: {minTemperature()}°</span>{" "}
                 <span className="col currentHumidity">
-                  Humidity :{props.data.humidity}%
+                  Humidity: {props.data.humidity}%
                 </span>{" "}
                 <span className="col currentWind">
-                  Wind : {props.data.wind} km/h
+                  Wind: {props.data.wind} km/h
                 </span>
               </div>
             </div>
