@@ -51,13 +51,13 @@ export default function WeatherInfo(props) {
           <div className="row weatherCurrentSection">
             <div className="col weatherConditions">
               <div className="col weatherCondition">
-                <span className="col currentFeelsLike">
+                <span className="col-4 currentFeelsLike">
                   Feels Like: {feelsTemperature()}°
                 </span>{" "}
-                <span className="col currentHumidity">
+                <span className="col-4 currentHumidity">
                   Humidity: {props.data.humidity}%
                 </span>{" "}
-                <span className="col currentWind">
+                <span className="col-4 currentWind">
                   Wind: {props.data.wind} km/h
                 </span>
               </div>

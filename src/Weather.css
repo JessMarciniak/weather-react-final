@@ -3,15 +3,8 @@
   --secondary-color: #31d2f2;
   --hyperlink-color: #9fadd3;
 }
-body {
-  background: linear-gradient(
-    180.8deg,
-    rgb(139, 10, 130) 6.9%,
-    rgb(73, 6, 70) 73.2%
-  );
-}
+
 .Weather {
-  font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #dadde1;
   padding: 16px;
   border-radius: 4px;
@@ -45,16 +38,15 @@ body {
   list-style: none;
 }
 
-.Weather .locationButton:hover {
-  background-color: #21356e;
-  border-color: #0d6efd;
-  color: #0d6efd;
-  transition: 0.4s ease-out;
+.Weather .locationButton {
+  padding-left: 8px;
 }
 
-.Weather .searchButton:hover {
-  background-color: #21356e;
+.Weather .locationButton:hover,
+.searchButton:hover {
+  background: transparent;
   border-color: #31d2f2;
+  text-align: justify;
   color: #31d2f2;
   transition: 0.4s ease-out;
 }

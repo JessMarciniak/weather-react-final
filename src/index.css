@@ -1,1 +1,17 @@
+html {
+  height: 100%;
+}
+body {
+  background: linear-gradient(
+    180.8deg,
+    rgb(139, 10, 130) 6.9%,
+    rgb(73, 6, 70) 73.2%
+  );
+  background-repeat: no-repeat;
+}
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
