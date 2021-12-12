@@ -1,15 +1,22 @@
 :root {
-  --main-text-color: #0d6efd;
+  --main-text-color: #6c757d;
   --secondary-color: #31d2f2;
+  --hyperlink-color: #9fadd3;
 }
-
+body {
+  background: linear-gradient(
+    180.8deg,
+    rgb(139, 10, 130) 6.9%,
+    rgb(73, 6, 70) 73.2%
+  );
+}
 .Weather {
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #dadde1;
   padding: 16px;
   border-radius: 4px;
   color: var(--main-text-color);
-  background-color: #21356e;
+  background-color: #21356e7e;
 }
 .Weather form {
   margin-bottom: 20px;
@@ -24,6 +31,18 @@
   font-weight: 100;
   line-height: 29px;
   margin: 20px 0 0 0;
+}
+
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+.Weather li {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  list-style: none;
 }
 
 .Weather .locationButton:hover {
@@ -44,14 +63,14 @@
   border: none;
   border-bottom: 3px solid var(--secondary-color);
   border-radius: 0;
-  color: var(--secondary-color);
+  color: var(--main-text-color);
   font-size: 20px;
   font-weight: 700;
   padding-left: 5px;
 }
 
 .Weather .form-control:focus {
-  color: #fff;
+  color: var(--main-text-color);
   background-color: transparent;
   border-color: var(--secondary-color);
   outline: 0;
@@ -60,7 +79,7 @@
 }
 
 .Weather .form-control:hover {
-  color: var(--secondary-color);
+  color: var(--main-text-color);
   background-color: #31d2f283;
   border-color: var(--secondary-color);
   outline: 0;
@@ -89,7 +108,7 @@
 
 .Weather .unit a {
   text-decoration: none;
-  color: #9fadd3;
+  color: var(--hyperlink-color);
 }
 
 .Weather .unit a:hover {
@@ -110,8 +129,8 @@
 }
 
 .weatherConditions {
-  border-top: 0.5px solid rgba(238, 238, 238, 0.3);
-  border-bottom: 0.5px solid rgba(238, 238, 238, 0.3);
+  border-top: 0.5px solid rgba(126, 245, 235, 0.3);
+  border-bottom: 0.5px solid rgba(126, 245, 235, 0.3);
   padding: 10px;
 }
 

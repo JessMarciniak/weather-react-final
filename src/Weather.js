@@ -62,7 +62,7 @@ export default function Weather(props) {
             <div className="col-3 col-md-2">
               <button
                 onClick={getLocation}
-                className="locationButton btn btn-primary"
+                className="locationButton btn btn-info w-100"
               >
                 Current
               </button>
@@ -72,7 +72,6 @@ export default function Weather(props) {
                 type="search"
                 placeholder="Enter a city..."
                 className="form-control"
-                autoFocus="on"
                 onChange={handleCityChange}
               />
             </div>
